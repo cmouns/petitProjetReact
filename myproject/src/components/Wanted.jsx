@@ -14,11 +14,9 @@ const Container = tw.div`
     gap-4
 `
 
-
-
 class Wanted extends Component {
 
-  audioPlayer = null  // stockage de l'instance audio active
+  audioPlayer = null  
 
   state = {
     Mugiwaras: [
@@ -64,7 +62,7 @@ class Wanted extends Component {
       i === index ? { ...item, sleeping: true, transformation: false } : item
     );
     this.setState({ Mugiwaras: updated });
-    this.stopSound();  // arrêt du son quand on rendort
+    this.stopSound();  
   };
 
   wakeUp = (index) => {
@@ -80,13 +78,13 @@ class Wanted extends Component {
     );
     this.setState({ Mugiwaras: updated });
     
-    // Choix du son en fonction du personnage
+    
     let soundToPlay = null;
     if (index === 0) soundToPlay = gear5sound;
     else if (index === 1) soundToPlay = soundZoro;
     else if (index === 2) soundToPlay = soundSanji;
 
-    this.stopSound();  // stop son courant avant nouveau son
+    this.stopSound();  
     if (soundToPlay) {
       this.audioPlayer = new Audio(soundToPlay);
       this.audioPlayer.play();

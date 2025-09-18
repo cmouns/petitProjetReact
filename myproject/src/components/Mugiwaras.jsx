@@ -61,9 +61,11 @@ const Mugiwaras = (props) => {
 
   return (
     <Container>
+      
       <Title>{props.name}</Title>
       <img width="500px" height="500px" src={imgSrc} alt={props.name} />
       <Texte>{comment}</Texte>
+
     </Container>
       
   );

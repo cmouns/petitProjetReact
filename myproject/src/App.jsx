@@ -2,7 +2,6 @@ import { Component } from 'react'
 import './App.css'
 import tw from "tailwind-styled-components"
 import Wanted from './components/Wanted'
-import backgroundOnePiece from './assets/backgroundop.png'
 
 const Container = tw.div`
     flex

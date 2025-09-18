@@ -152,13 +152,15 @@
                 )}
                 <Button onClick={() => this.activebtnComment(index)}>Un commentaire ?</Button>
                 
-                <CustomBtn>Bouton gris</CustomBtn>
-                <CustomBtn myCustomBtn = {customBtnRed} >Bouton rouge avec border radius</CustomBtn>
-                <CustomBtn myCustomBtn = {customBtnBlue}>Bouton bleu</CustomBtn>
+                
               </Container>
             );
           })}
+          <CustomBtn >Bouton gris</CustomBtn>
+                <CustomBtn   test="test" myCustomBtn = {customBtnRed} >Bouton rouge avec border radius</CustomBtn>
+                <CustomBtn myCustomBtn = {customBtnBlue}>Bouton bleu</CustomBtn>
         </div>
+        
       );
     }
   }

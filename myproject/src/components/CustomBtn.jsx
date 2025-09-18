@@ -6,20 +6,22 @@ const customBtn = {
     fontSize: '19px',
     padding: '15px 30px',
     textAlign: 'center',
-    textionDecoration : 'none',
+    textDecoration : 'none',
     borderRadius: '7px',
     display: 'block',
     margin: '5px auto'
 }
 
 const CustomBtn = (props) => {
+    const { children, myCustomBtn, ...leReste } = props;
 
-    let customStyleBtn = props.myCustomBtn
+
+    let customStyleBtn = myCustomBtn
 
   return (
-    <div>
-      <button style= {{...customBtn, ...customStyleBtn }}>{props.children}</button>
-    </div>
+    
+      <button type = "button" style= {{...customBtn, ...customStyleBtn }} {... leReste}>{children}</button>
+    
   )
 }
 
